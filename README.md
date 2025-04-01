@@ -1,2 +1,2 @@
 # web
-Projeto Senai design de interface web
+Projeto com a turma DiWeb 2503NB Senai Leopoldina
