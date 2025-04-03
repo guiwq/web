@@ -1,11 +1,40 @@
-/* regra css */
+/* google fonte */
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+ 
+
+/* 
+   boot fonts
+
+   crete:
+   font-family: "Crete Round", serif;
+  font-weight: 400;
+  font-style: normal;
+
+    inter:
+    font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+
+    roboto:
+    font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  
+  
+  
+    */
+
+
+tt/* regra css */
 /* reset CSS */
 * {
     margin:  0;
     padding: 0;
     box-sizing: border-box;
     scrollbar-width: thin;
-    scrollbar-color: rgb(250, 247, 247);
+    scrollbar-color: rgb(255, 255, 255);
 }
 
 body {
@@ -27,7 +56,7 @@ ul {
 }
 
 html[data-theme='dark'] .logo {
-    filter: invert(1) ;   
+    filter: invert(0) ;   
 }
 
 #header {
@@ -43,13 +72,27 @@ html[data-theme='dark'] .logo {
 
 
 .logo {/* logo */
-    width: 56px; /* largura */
+    width: 150x; /* largura */
     height:  56px; /* altura */
 
 
 
 
 }
+
+.header-toggle {
+    display: flex;
+    justify-content: flex;
+
+
+
+}
+
+
+
+
+
+
 
 
 #toggleTheme {
@@ -77,9 +120,39 @@ html[data-theme='dark'] .logo {
 }
 
 .menu-link {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
     text-transform: uppercase;
+    font-size: 35px;
+
+
+}
+
+
+.menu-texto {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: "Inter , Sans-serif";
+    font-weight: 400;
 
 
 
 }
+
+/* CSS RESPONSIVO
+    TELAS ATE A PARTIR DE 768 */
+@media (min-width: 768px) {
+    .header-nav {
+        display: flex;
+    }
+    .header-nav,
+    .header-toggle {
+        min-width: 30%;
+    }
+
+
+}
+
+
+
+
