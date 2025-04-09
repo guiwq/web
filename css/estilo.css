@@ -1,148 +1,128 @@
-/* google fonte */
-@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap');
- 
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Patua+One&display=swap');
+
+/* Variaveis para cores */
+
+/* Definir cores tema Dark */
+:root,
+:root[data-theme="ligth"] {
+    --fundo-header: rgb(255, 255, 255);
+}
+
+/* Definir cores tema Light */
+:root[data-theme="dark"] {
+    --fundo-header: rgb(0, 0, 0);
+}
+
 
 /* 
-   boot fonts
 
-   crete:
-   font-family: "Crete Round", serif;
+Root Font
+
+Patua one:
+  font-family: "Patua One", serif;
   font-weight: 400;
   font-style: normal;
 
-    inter:
-    font-family: "Inter", sans-serif;
+Outfit:
+  font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
 
-    roboto:
+Inter:
     font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  
-  
-  
-    */
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+*/
 
 
-tt/* regra css */
 /* reset CSS */
 * {
-    margin:  0;
+    margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /*  */
     scrollbar-width: thin;
-    scrollbar-color: rgb(255, 255, 255);
 }
 
 body {
-    background-color: rgb(20, 19, 19);
-    color: whitesmoke;
+    background-color: rgb(255, 253, 253);
+    color: rgb(0, 0, 0);
 }
+
 
 a {
-    color:whitesmoke;
+    color:rgb(0, 0, 0);
     text-decoration: none;
-
 }
+
 
 ul {
     list-style: none;
-
-
-
-
 }
+
 
 html[data-theme='dark'] .logo {
-    filter: invert(0) ;   
+    filter: invert(0);
 }
+
 h1 {
     font-size: 40px;
-    font-weight: 100;
-    font-family: "inter", sans-serif;
+    font-weight: 200;
+    font-family: "Outfit", sans-serif;
     letter-spacing: 3px;
 }
 
 p,
-li,
+li, 
 span {
-    font-size: 18px;
-
-
-
-
-
+  font-size: 18px; 
 }
-
 p {
     text-align: justify;
-    font-family: "inter" , sans-serif;
-
-
+    font-family: "Inter", sans-serif;
 }
 
 strong {
     font-weight: 800;
-    color: red;
-
-
 }
-
 
 /* Header */
 #header {
-    display: flex;
+    display: flex; 
     flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; 
+    align-items: center; 
     width: 100%;
     padding: 10px 20px;
-
-
 }
 
-
-.logo {/* logo */
-    width: 100px; /* largura */
-    height:  46px; /* altura */
-
-
-
-
+/* Logo */
+.logo {
+    width: 80px;
+    height: auto; 
 }
+
 
 .header-toggle {
     display: flex;
     justify-content: flex-end;
-
-
-
 }
-
-
-
-
-
-
 
 
 #toggleTheme {
-    color: whitesmoke; /* Cor de Texto */
-    font-size: 30px; /* 16 - 20 */
+    color: rgb(0, 204, 255);
+    font-size: 20px;
     cursor: pointer;
-    transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out; 
 }
 
-
-/* menu desktop */
 
 .menu {
     display: flex;
     align-items: center;
-    gap: 25px; 
+    gap: 25px;
 }
 
 .menu-item {
@@ -152,14 +132,15 @@ strong {
 
 .menu-link {
     display: flex;
+
 }
 
 
 .menu-texto{
     font-size: 12px; 
     text-transform: uppercase;
-    font-family: "Inter", sans-serif;  
-    font-weight: 300; 
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
 }
 
 
@@ -175,26 +156,22 @@ strong {
 }
 
 .menu-mobile {
-    bottom: 0;
     position: fixed;
-    width: 100vw; /* VW = Viewport - widht */
+    bottom: 0;
+    width: 100vw; /* VW = viewPort - Width */
     justify-content: space-between;
     border-top: 1px solid #989898;
-    z-index: 1;
+    z-index: 1; /*  */
+    background: rgb(39, 39, 39);
 }
 
 .menu-link.active .icone-link,
 .menu-link.active .menu-texto,
 .menu-link:hover .icone-link,
 .menu-link:hover .menu-texto {
-        color: red;
-        font-weight: 600;
-
-
+    color: rgb(0, 195, 255);
+    font-weight: 600;
 }
-
-
-
 
 .icone-link,
 .menu-texto {
@@ -202,17 +179,10 @@ strong {
     font-weight: 600;
 }
 
-
-
 .icone-link {
-font-size: 25px;
-
+    font-size: 25px;
 }
-
-
-/* Fim CSS Do Menu */
-
-
+/* Fim CSS do Menu */
 
 /* Home / Main */
 
@@ -228,14 +198,11 @@ font-size: 25px;
     gap: 25px;
 }
 
-
-.video iframe{
+.video iframe {
     width: 100%;
     aspect-ratio: 16/9;
-
-
-
 }
+
 .btn {
     display: flex;
     justify-content: center;
@@ -243,50 +210,93 @@ font-size: 25px;
     gap: 5px;
     background: transparent;
     width: 100%;
-    color: white;
     border: none;
     padding: 8px 10px;
-    border-radius: 10px 2px 30px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-
 .btn-primary {
-    border: 1px solid white;
-
+    border: 1px solid rgb(0, 0, 0);
 }
 
 .btn span,
 .btn i {
-    color: white;
-    font-size: 18px;
+    color: #464646;
+    font-size: 16px;
+}
 
+.btn:hover {
+    transform: scale(1.02);
+    transition: all ease-in-out .4s;
+}
 
+.btn:hover span,
+.btn:hover i {
+    color: rgb(0, 0, 0);
+}
+
+.icon-social {
+    font-size: 25px;
+    color: #000000;
+}
+
+.icon-social:hover {
+    color: #00aeff;
 }
 
 
-.btn :hover{
-    transform: scale(2);
-    transition: all ease-in-out 5s;
+
+
+
+
+/* Estrutura */
+
+/* ATUALIZAÇÕES FUTURAS */
+#home {
+    padding: 40px 16px;
 }
 
 
 
-/* CSS RESPONSIVO
-    TELAS ATE A PARTIR DE 768 */
-    @media (min-width: 768px) {
-        .header-nav {
-            display: flex;
-        }
-    
-        .header-nav,
-        .header-toggle {
-            min-width: 25%;
-        }
-    
-        .nav-mobile {
-            display: none;
-        }
+/* CSS Responsivo */
+@media (min-width: 768px) {
+    #header {
+        background-color: var(--fundo-header);
+        position: fixed;
+        border-bottom: 1px solid #989898;
+        padding: 16px 96px;
+    }
+    .header-nav {
+        display: flex;
     }
 
+    .header-nav,
+    .header-toggle {
+        min-width: 25%;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+    
+    #home { /* Atualização futura */
+        padding: 128px 96px 64px;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+/* 1200px */
+@media (min-width: 1200px) {
+    #home {
+        padding: 160px 96px 32px;
+    }
+}
 
 
