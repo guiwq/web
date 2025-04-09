@@ -6,12 +6,16 @@
 /* Definir cores tema Dark */
 :root,
 :root[data-theme="ligth"] {
-    --fundo-header: rgb(255, 255, 255);
-}
 
+    --bg: rgb(39,39,39) ;
+    --color: rgb(255, 255, 255);
+    ---hover: rgb(243, 243, 243);
+}
 /* Definir cores tema Light */
 :root[data-theme="dark"] {
-    --fundo-header: rgb(0, 0, 0);
+    --bg: rgb(255, 255, 255);
+    --color: rgb(0, 0, 0);
+    ---hover: rgb(5, 5, 5);
 }
 
 
@@ -47,13 +51,13 @@ Inter:
 }
 
 body {
-    background-color: rgb(255, 253, 253);
-    color: rgb(0, 0, 0);
+    background-color: var(--bg);
+    color:var(--color);
 }
 
 
 a {
-    color:rgb(0, 0, 0);
+    color:var(--color);
     text-decoration: none;
 }
 
@@ -113,7 +117,7 @@ strong {
 
 #toggleTheme {
     color: rgb(0, 204, 255);
-    font-size: 20px;
+    font-size: 20x;
     cursor: pointer;
     transition: all 0.6s ease-in-out; 
 }
@@ -162,7 +166,7 @@ strong {
     justify-content: space-between;
     border-top: 1px solid #989898;
     z-index: 1; /*  */
-    background: rgb(39, 39, 39);
+    background: var(--bg);
 }
 
 .menu-link.active .icone-link,
@@ -217,12 +221,16 @@ strong {
 }
 
 .btn-primary {
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(71, 71, 71);
+}
+
+.btn-primary:hover {
+    border: 1px solid rgb(0, 140, 255);
 }
 
 .btn span,
 .btn i {
-    color: #464646;
+    color: #505050;
     font-size: 16px;
 }
 
@@ -233,12 +241,13 @@ strong {
 
 .btn:hover span,
 .btn:hover i {
-    color: rgb(0, 0, 0);
+    color: rgb(0, 140, 255);
+    
 }
 
 .icon-social {
     font-size: 25px;
-    color: #000000;
+    color: #6a6a6a;
 }
 
 .icon-social:hover {
@@ -262,7 +271,7 @@ strong {
 /* CSS Responsivo */
 @media (min-width: 768px) {
     #header {
-        background-color: var(--fundo-header);
+        background-color: var(--bg);
         position: fixed;
         border-bottom: 1px solid #989898;
         padding: 16px 96px;
