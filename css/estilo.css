@@ -50,6 +50,10 @@ Inter:
     scrollbar-width: thin;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg);
     color:var(--color);
@@ -262,8 +266,10 @@ strong {
 /* Estrutura */
 
 /* ATUALIZAÇÕES FUTURAS */
-#home {
+#home,
+.projetos {
     padding: 40px 16px;
+
 }
 
 
@@ -289,7 +295,7 @@ strong {
         display: none;
     }
     
-    #home { /* Atualização futura */
+    #home, .projetos{ /* Atualização futura */
         padding: 128px 96px 64px;
     }
 
@@ -306,6 +312,29 @@ strong {
     #home {
         padding: 160px 96px 32px;
     }
+
+    h1 {
+        font-size: 80px;
+    }
+
+    h2  {
+        font-size: 65px;
+    }
+    p, span, li {
+        font-size: 20px; /* alternar entre 20 a 26 */
+    }
 }
 
+
+@media (min-width: 1400px) {
+    h1 {
+        font-size: 100px;
+    }
+    h2 {
+        font-size: 70px; /* alternar entre 70 a 75 */
+    }
+    .projetos {
+        padding: 160px 240 64px;
+    }
+}
 
