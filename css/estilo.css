@@ -10,12 +10,14 @@
     --bg: rgb(39,39,39) ;
     --color: rgb(255, 255, 255);
     ---hover: rgb(243, 243, 243);
+    ---sombra : rgb(0, 122, 221) ;
 }
 /* Definir cores tema Light */
 :root[data-theme="dark"] {
     --bg: rgb(255, 255, 255);
     --color: rgb(0, 0, 0);
     ---hover: rgb(5, 5, 5);
+    ---sombra: rgb(0, 119, 255) ;
 }
 
 
@@ -50,8 +52,14 @@ Inter:
     scrollbar-width: thin;
 }
 
+html[data-theme='dark'] .logo {
+    filter: invert(0);
+}
+
 html {
     scroll-behavior: smooth;
+
+
 }
 
 body {
@@ -71,9 +79,6 @@ ul {
 }
 
 
-html[data-theme='dark'] .logo {
-    filter: invert(0);
-}
 
 h1 {
     font-size: 40px;
@@ -81,6 +86,26 @@ h1 {
     font-family: "Outfit", sans-serif;
     letter-spacing: 3px;
 }
+
+h2 {
+    font-size: 35px;
+    font-family: "Patua One", serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #00aeff;
+}
+
+h3 {
+    font-size: 25px;
+    font-family: "Patua One", serif;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #00aeff;
+
+}
+
+
 
 p,
 li, 
@@ -264,7 +289,54 @@ strong {
 
 
 /* Estrutura */
+/* Projetos */
+.projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
 
+.projetos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.projeto-card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card-img {
+    width: 100%;
+    pointer-events: none;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 10px 70px var(---sombra);
+}
+
+.card-description {
+    font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  font-style: normal;
+
+}
+
+.icon-list {
+    color: #006eff;
+    font-size: 14px;
+}
+
+
+.card-item {
+    margin-left: 10px;
+    font-size: 20px;
+    margin-bottom: 5px;
+
+}
 /* ATUALIZAÇÕES FUTURAS */
 #home,
 .projetos {
@@ -305,7 +377,17 @@ strong {
         align-items: flex-start;
     }
 
+} /* Fim Do 768 */
+
+@media (min-width : 992px) {
+    .projeto-card{
+        flex-direction: row;
+    }
+    .card-img {
+        width: 55%;
+    }
 }
+
 
 /* 1200px */
 @media (min-width: 1200px) {
