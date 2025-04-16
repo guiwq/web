@@ -105,6 +105,12 @@ h3 {
 
 }
 
+h4 {
+    font-size: 20px;
+    font-family: "inter" , sans-serif;
+    font-weight: 300;
+    text-align: left;
+}
 
 
 p,
@@ -134,7 +140,7 @@ strong {
 
 /* Logo */
 .logo {
-    width: 80px;
+    width: 180px;
     height: auto; 
 }
 
@@ -351,12 +357,71 @@ strong {
 
 /* ATUALIZAÇÕES FUTURAS */
 #home,
-.projetos {
+.projetos,
+.sobre {
     padding: 40px 16px;
 
 }
 
+/* Sobre */
+.sobre { 
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
 
+.sobre-perfil {
+    width: 100%;
+    pointer-events: none;
+    border-radius: 50%;
+    border: 8px solid rgb(0, 140, 255);
+    object-position: center;
+}
+
+
+.sobre-content1,
+.cobre-content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32x;
+    margin-bottom: 80px;
+}
+
+.sobre-descricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.sobre-loja i,
+.sobre-icones i {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sobre-loja,
+.sobre-icones {
+    font-size: 20px;
+    color: #00aeff;
+}
+
+.sobre-content2 .col1,
+.sobre-content2 .col2 {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    gap: 32px;
+}
+
+.sobre-content2 .col1 .row1,
+.sobre-content2 .col2 .row2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 /* CSS Responsivo */
 @media (min-width: 768px) {
@@ -412,7 +477,30 @@ strong {
         align-items : flex-end;
         text-align: right;
     }
+
+    .card-img {
+        width: 55%;
+    }
+
+    .sobre {
+        gap: 10px;
+    }
     
+    .sobre-content1,
+    .sobre-content2 {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        justify-content: flex-start;
+        gap: 64px;
+    }
+
+    .sobre-descricao h2 {
+        text-align: left;
+    }
+
+    .descricao-button {
+        justify-content: flex-start;
+    }
 }
 
 
@@ -432,6 +520,10 @@ strong {
     p, span, li {
         font-size: 20px; /* alternar entre 20 a 26 */
     }
+
+    .descricao-button .btn {
+        width: auto;
+    }
 }
 
 
@@ -442,11 +534,16 @@ strong {
     h2 {
         font-size: 70px; /* alternar entre 70 a 75 */
     }
-    .projetos {
+    .projetos,
+    .sobre {
         padding: 160px 240 64px;
     }
 }
 
+
+
+
+/* Largura ate: = x */
 @media (max-width : 992px) {
     .card-body {
         display: flex;
