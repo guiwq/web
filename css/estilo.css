@@ -405,6 +405,7 @@ strong {
 .sobre-loja,
 .sobre-icones {
     font-size: 20px;
+    align-items: center;
     color: #00aeff;
 }
 
@@ -423,6 +424,82 @@ strong {
     gap: 10px;
 }
 
+
+.row2 .sobre-lista li {
+    margin-bottom: 5px;
+}
+
+
+/* Accordion */
+
+/* .accordion {
+    display: flexbox;
+} */
+
+.accordion-header {
+    width: 100%;
+    border: 1px solid var(--color);
+    display: flex;
+    background: transparent;
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 8px 16px; 
+    align-items: center;
+    transition: ease-in-out .5s;
+}
+
+.accordion-header span,
+.accordion-header i {
+    color: var(--color);
+    /* text-transform: capitalize; */
+}
+
+.accordion-body {
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border: 1px solid var(--color);
+    display: none;
+}
+
+.accordion-item.active .accordion-header {
+    background: var(--color);
+} 
+
+.accordion-item.active .accordion-header span,
+.accordion-item.active .accordion-header i {
+    color: var(--bg);
+}
+
+.accordion-item.active .accordion-body {
+    display: flex;
+}
+
+/* Contato */
+
+/* Roda Pé */
+footer {
+    margin-bottom: 60px;
+}
+
+footer p {
+    font-size: 16px;
+    text-align: center;
+    padding: 16px;
+    font-family: "inter" sans-serif;
+}
+
+footer a {
+    color: #989898;
+}
+
+
+footer i:hover,
+footer a:hover {
+    color: #00aeff;
+    transition: ease-in-out 3s;
+}
 /* CSS Responsivo */
 @media (min-width: 768px) {
     #header {
@@ -517,14 +594,16 @@ strong {
     h2  {
         font-size: 65px;
     }
-    p, span, li {
+    p, 
+    span, 
+    li {
         font-size: 20px; /* alternar entre 20 a 26 */
     }
 
     .descricao-button .btn {
         width: auto;
     }
-}
+} /* FIm do 1200px */
 
 
 @media (min-width: 1400px) {
@@ -543,13 +622,21 @@ strong {
 
 
 
-/* Largura ate: = x */
-@media (max-width : 992px) {
+/*  largura até: = x */
+@media (max-width: 992px) {
     .card-body {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: start;
+        justify-content: center;
+        align-items: center;
     }
-
+    .sobre {
+        padding: 0 96px;
+    }
+    .sobre-perfil {
+        width: 50%;
+        margin-left: 25%;
+        align-items: center;
+    }
+    
 }
