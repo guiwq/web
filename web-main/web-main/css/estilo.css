@@ -1,0 +1,672 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Patua+One&display=swap');
+
+/* Variaveis para cores */
+
+/* Definir cores tema Dark */
+:root,
+:root[data-theme="ligth"] {
+
+    --bg: rgb(39,39,39) ;
+    --color: rgb(255, 255, 255);
+    ---hover: rgb(243, 243, 243);
+    ---sombra : rgb(0, 122, 221) ;
+}
+/* Definir cores tema Light */
+:root[data-theme="dark"] {
+    --bg: rgb(255, 255, 255);
+    --color: rgb(0, 0, 0);
+    ---hover: rgb(5, 5, 5);
+    ---sombra: rgb(0, 119, 255) ;
+}
+
+
+/* 
+
+Root Font
+
+Patua one:
+  font-family: "Patua One", serif;
+  font-weight: 400;
+  font-style: normal;
+
+Outfit:
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+
+Inter:
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+*/
+
+
+/* reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*  */
+    scrollbar-width: thin;
+}
+
+html[data-theme='dark'] .logo {
+    filter: invert(0);
+}
+
+html {
+    scroll-behavior: smooth;
+
+
+}
+
+body {
+    background-color: var(--bg);
+    color:var(--color);
+}
+
+
+a {
+    color:var(--color);
+    text-decoration: none;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+
+h1 {
+    font-size: 40px;
+    font-weight: 200;
+    font-family: "Outfit", sans-serif;
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-size: 35px;
+    font-family: "Patua One", serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #00aeff;
+}
+
+h3 {
+    font-size: 25px;
+    font-family: "Patua One", serif;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #00aeff;
+
+}
+
+h4 {
+    font-size: 20px;
+    font-family: "inter" , sans-serif;
+    font-weight: 300;
+    text-align: left;
+}
+
+
+p,
+li, 
+span {
+  font-size: 18px; 
+}
+p {
+    text-align: justify;
+    font-family: "Inter", sans-serif;
+}
+
+strong {
+    font-weight: 800;
+}
+
+/* Header */
+#header {
+    display: flex; 
+    flex-flow: row wrap;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
+    padding: 10px 20px;
+    z-index: 9999999;
+}
+
+/* Logo */
+.logo {
+    width: 180px;
+    height: auto; 
+}
+
+
+.header-toggle {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+#toggleTheme {
+    color: rgb(0, 204, 255);
+    font-size: 20x;
+    cursor: pointer;
+    transition: all 0.6s ease-in-out; 
+}
+
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu-item {
+    width: 100%;
+}
+
+
+.menu-link {
+    display: flex;
+
+}
+
+
+.menu-texto{
+    font-size: 12px; 
+    text-transform: uppercase;
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+}
+
+
+.header-nav {
+    display: none;
+}
+
+.menu-mobile .menu-link {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;      
+}
+
+.menu-mobile {
+    position: fixed;
+    bottom: 0;
+    width: 100vw; /* VW = viewPort - Width */
+    justify-content: space-between;
+    border-top: 1px solid #989898;
+    z-index: 1; /*  */
+    background: var(--bg);
+}
+
+.menu-link.active .icone-link,
+.menu-link.active .menu-texto,
+.menu-link:hover .icone-link,
+.menu-link:hover .menu-texto {
+    color: rgb(0, 195, 255);
+    font-weight: 600;
+}
+
+.icone-link,
+.menu-texto {
+    color: #6a6a6a;
+    font-weight: 600;
+}
+
+.icone-link {
+    font-size: 25px;
+}
+/* Fim CSS do Menu */
+
+/* Home / Main */
+
+#home {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.video iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    width: 100%;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    border: 1px solid rgb(71, 71, 71);
+}
+
+.btn-primary:hover {
+    border: 1px solid rgb(0, 140, 255);
+}
+
+.btn span,
+.btn i {
+    color: #505050;
+    font-size: 16px;
+}
+
+.btn:hover {
+    transform: scale(1.02);
+    transition: all ease-in-out .4s;
+}
+
+.btn:hover span,
+.btn:hover i {
+    color: rgb(0, 140, 255);
+    
+}
+
+.icon-social {
+    font-size: 25px;
+    color: #6a6a6a;
+}
+
+.icon-social:hover {
+    color: #00aeff;
+}
+
+
+
+
+
+
+/* Estrutura */
+/* Projetos */
+.projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.projetos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.projeto-card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+
+.card-img {
+    width: 100%;
+    pointer-events: none;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 10px 70px var(---sombra);
+}
+
+.card-description {
+    font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  font-style: normal;
+
+}
+
+.icon-list {
+    color: #006eff;
+    font-size: 14px;
+}
+
+
+.card-item {
+    margin-left: 10px;
+    font-size: 20px;
+    margin-bottom: 5px;
+
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+}
+
+
+/* ATUALIZAÇÕES FUTURAS */
+#home,
+.projetos,
+.sobre,
+.contato {
+    padding: 40px 16px;
+
+
+
+
+}
+
+/* Sobre */
+.sobre { 
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sobre-perfil {
+    width: 100%;
+    pointer-events: none;
+    border-radius: 50%;
+    border: 8px solid rgb(0, 140, 255);
+    object-position: center;
+}
+
+
+.sobre-content1,
+.cobre-content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32x;
+    margin-bottom: 80px;
+}
+
+.sobre-descricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.sobre-loja i,
+.sobre-icones i {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sobre-loja,
+.sobre-icones {
+    font-size: 20px;
+    align-items: center;
+    color: #00aeff;
+}
+
+.sobre-content2 .col1,
+.sobre-content2 .col2 {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    gap: 32px;
+}
+
+.sobre-content2 .col1 .row1,
+.sobre-content2 .col2 .row2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.row2 .sobre-lista li {
+    margin-bottom: 5px;
+}
+
+
+/* Accordion */
+
+/* .accordion {
+    display: flexbox;
+} */
+
+.accordion-header {
+    width: 100%;
+    border: 1px solid var(--color);
+    display: flex;
+    background: transparent;
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 8px 16px; 
+    align-items: center;
+    transition: ease-in-out .5s;
+}
+
+.accordion-header span,
+.accordion-header i {
+    color: var(--color);
+    /* text-transform: capitalize; */
+}
+
+.accordion-body {
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border: 1px solid var(--color);
+    display: none;
+}
+
+.accordion-item.active .accordion-header {
+    background: var(--color);
+} 
+
+.accordion-item.active .accordion-header span,
+.accordion-item.active .accordion-header i {
+    color: var(--bg);
+}
+
+.accordion-item.active .accordion-body {
+    display: flex;
+}
+
+/* Contato */
+.contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    border-top: 1px solid var(--color);
+    border-bottom: 1px solid var(--color);
+}
+
+.contato p {
+    text-align: justify;
+    margin-top: 50px;
+    text-transform: capitalize;
+    font-size: 20px;
+    padding: 0 140px;
+}
+
+.contato span {
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+.contato span:hover {
+    color: var(---hover);
+}
+
+/* Roda Pé */
+footer {
+    margin-bottom: 60px;
+}
+
+footer p {
+    font-size: 16px;
+    text-align: center;
+    padding: 16px;
+    font-family: "inter" sans-serif;
+}
+
+footer a {
+    color: #989898;
+}
+
+
+footer i:hover,
+footer a:hover {
+    color: #00aeff;
+    transition: ease-in-out 3s;
+}
+/* CSS Responsivo */
+@media (min-width: 768px) {
+    #header {
+        background-color: var(--bg);
+        position: fixed;
+        border-bottom: 1px solid #989898;
+        padding: 16px 96px;
+    }
+    .header-nav {
+        display: flex;
+    }
+
+    .header-nav,
+    .header-toggle {
+        min-width: 25%;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+    
+    #home, .projetos{ /* Atualização futura */
+        padding: 128px 96px 64px;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+} /* Fim Do 768 */
+
+
+/* 0 até 992 */
+@media (min-width : 992px) {
+    .projeto-card{
+        flex-direction: row;
+    }
+    .card-img {
+        width: 55%;
+    }
+    .projeto-card.card-reverse {
+        flex-direction: row-reverse;
+        justify-content: end;
+    }
+
+    .projeto-card.card-body {
+        display: flex ;
+        justify-content: column;
+        flex-direction: center;
+        align-items : flex-end;
+        text-align: right;
+    }
+
+    .card-img {
+        width: 55%;
+    }
+
+    .sobre {
+        gap: 10px;
+    }
+    
+    .sobre-content1,
+    .sobre-content2 {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        justify-content: flex-start;
+        gap: 64px;
+    }
+
+    .sobre-descricao h2 {
+        text-align: left;
+    }
+
+    .descricao-button {
+        justify-content: flex-start;
+    }
+}
+
+
+/* 1200px */
+@media (min-width: 1200px) {
+    #home {
+        padding: 160px 96px 32px;
+    }
+
+    h1 {
+        font-size: 80px;
+    }
+
+    h2  {
+        font-size: 65px;
+    }
+    p, 
+    span, 
+    li {
+        font-size: 20px; /* alternar entre 20 a 26 */
+    }
+
+    .descricao-button .btn {
+        width: auto;
+    }
+} /* FIm do 1200px */
+
+
+@media (min-width: 1400px) {
+    h1 {
+        font-size: 100px;
+    }
+    h2 {
+        font-size: 70px; /* alternar entre 70 a 75 */
+    }
+    .projetos,
+    .sobre {
+        padding: 160px 240 64px;
+    }
+}
+
+
+
+
+/*  largura até: = x */
+@media (max-width: 992px) {
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sobre {
+        padding: 0 96px;
+    }
+    .sobre-perfil {
+        width: 50%;
+        margin-left: 25%;
+        align-items: center;
+    }
+    
+}
